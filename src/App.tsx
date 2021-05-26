@@ -12,6 +12,12 @@ export const themeTypography = createMuiTheme({
       fontWeight: 'bold',
       lineHeight: 1.1,
     },
+    caption: {
+      fontWeight: 600,
+    },
+    body2: {
+      lineHeight: 1.3,
+    },
   },
 });
 
