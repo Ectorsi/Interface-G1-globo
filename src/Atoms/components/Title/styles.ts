@@ -12,14 +12,14 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
 }));
 
-export const themeTypography = createMuiTheme({
-  typography: {
-    fontFamily: 'Open Sans',
-    h2: {
-      fontWeight: 'bold',
-      lineHeight: 1.1,
-    },
-  },
-});
+// export const themeTypography = createMuiTheme({
+//   typography: {
+//     fontFamily: 'Open Sans',
+//     h2: {
+//       fontWeight: 'bold',
+//       lineHeight: 1.1,
+//     },
+//   },
+// });
 
 export default useStyles;
