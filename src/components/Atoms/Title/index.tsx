@@ -3,8 +3,18 @@ import React from 'react';
 import { Typography } from '@material-ui/core';
 import useStyles from './styles';
 
-const Title: React.FC = () => {
-  const classes = useStyles();
+export type TitleProps = {
+  isHighlight?: boolean;
+  isWhiteColor?: boolean;
+};
+
+// eslint-disable-next-line react/prop-types
+const Title: React.FC<TitleProps> = ({ isHighlight, isWhiteColor }) => {
+  const props = {
+    isHighlight,
+    isWhiteColor,
+  };
+  const classes = useStyles(props);
   return (
     <Typography className={classes.title} variant="h2">
       Equipes buscam desaparecidos da explosão que matou mais de 100 e feriu 4

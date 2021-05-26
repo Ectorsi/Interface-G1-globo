@@ -2,9 +2,9 @@
 import React from 'react';
 import { ButtonBase } from '@material-ui/core';
 import useStyles from './styles';
-import Label from '../../Atoms/components/Label/Index';
-import Title from '../../Atoms/components/Title/Index';
-import Description from '../../Atoms/components/Description/Index';
+import Label from '../../Atoms/Label/index';
+import Title from '../../Atoms/Title/index';
+import Description from '../../Atoms/Description/index';
 
 const Subject: React.FC = () => {
   const classes = useStyles({});

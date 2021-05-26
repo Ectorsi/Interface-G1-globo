@@ -2,7 +2,7 @@
 import React from 'react';
 import { Box } from '@material-ui/core';
 import useStyles from './styles';
-import ImageLogo from '../../assets/images/logo.svg';
+import ImageLogo from '../../../assets/images/logo.svg';
 
 const Header: React.FC = () => {
   const classes = useStyles({});
