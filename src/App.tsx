@@ -13,7 +13,7 @@ export const themeTypography = createMuiTheme({
       lineHeight: 1.1,
     },
   },
-})
+});
 
 const App: React.FC = () => {
   return (
@@ -22,7 +22,6 @@ const App: React.FC = () => {
       <Header />
       <Subject />
     </ThemeProvider>
-    
   );
 };
 
