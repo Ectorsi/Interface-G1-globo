@@ -1,9 +1,10 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { makeStyles, Theme } from '@material-ui/core/styles';
 import { TitleProps } from './index';
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
+
 const useStyles = makeStyles((theme: Theme) => ({
   title: {
-    color: '#C4170C',
+    color: (props: TitleProps) => (props.isHighlight ? '#C4170C' : '#fff'),
     width: '95%',
     marginLeft: '10px',
     marginBottom: '25px',
@@ -11,7 +12,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     fontWeight: 700,
     letterSpacing: -2.5,
     lineHeight: 1,
-    fontSize: (props: TitleProps) => (props.isHighlight ? '40px' : '24px'),
+    fontSize: (props: TitleProps) => (props.isTitleLarge ? '40px' : '24px'),
   },
 }));
 
