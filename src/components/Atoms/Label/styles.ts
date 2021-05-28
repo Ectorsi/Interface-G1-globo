@@ -5,7 +5,7 @@ const useStyles = makeStyles((theme: Theme) => ({
   label: {
     color: '#333',
     width: '85%',
-    marginLeft: '10px',
+    marginLeft: '12px',
     fontSize: '16px;',
     fontWeight: 600,
   },

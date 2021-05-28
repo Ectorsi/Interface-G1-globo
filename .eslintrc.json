@@ -24,6 +24,11 @@
         "prettier"
     ],
     "rules": {
+        "react/prop-types": "off",
+        "no-use-before-define": "off",
+        "react/jsx-props-no-spreading": "off",
+        "react/react-in-jsx-scope": "off",
+        "import/no-extraneous-dependencies": "off",
         "react-hooks/rules-of-hooks": "error",
         "react-hooks/exhaustive-deps": "warn",
         "react/jsx-filename-extension": [ 1, {"extensions": [".tsx"]} ],

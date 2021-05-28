@@ -3,7 +3,7 @@ import React from 'react';
 // eslint-disable-next-line no-use-before-define
 import { createMuiTheme, CssBaseline, ThemeProvider } from '@material-ui/core';
 import Header from './components/Molecules/Header/index';
-import Subject from './components/Molecules/Subject/index';
+import CardSubjectVertical from './components/Molecules/CardSubjectVertical/index';
 
 export const themeTypography = createMuiTheme({
   typography: {
@@ -16,7 +16,13 @@ const App: React.FC = () => {
     <ThemeProvider theme={themeTypography}>
       <CssBaseline />
       <Header />
-      <Subject />
+      <CardSubjectVertical
+        title={`
+        Equipes buscam desaparecidos 
+        da explosão que matou mais de 100 e feriu 4
+        mil no Líbano
+        `}
+      />
     </ThemeProvider>
   );
 };

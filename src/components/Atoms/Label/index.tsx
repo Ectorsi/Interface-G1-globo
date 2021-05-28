@@ -3,11 +3,15 @@ import React from 'react';
 import { Typography } from '@material-ui/core';
 import useStyles from './styles';
 
-const Label: React.FC = () => {
+type LabelProps = {
+  text: string;
+};
+
+const Label: React.FC<LabelProps> = ({ text }) => {
   const classes = useStyles();
   return (
     <Typography className={classes.label} variant="caption">
-      Cenário de destruição
+      {text}
     </Typography>
   );
 };
