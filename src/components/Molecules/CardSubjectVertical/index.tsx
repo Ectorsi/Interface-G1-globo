@@ -26,10 +26,21 @@ const CardSubjectVertical: React.FC<SubjectProps> = ({
   const classes = useStyles(props);
 
   return (
-    <ButtonBase className={classes.container} disableTouchRipple>
-      {!!label && <Label text={label} />}
-      <Title isHighlight isWhite={isTextWhite} text={title} />
-      {!!description && <Description text={description} />}
+    <ButtonBase
+      data-testid="Button-CardSubjectVertical"
+      className={classes.container}
+      disableTouchRipple
+    >
+      {!!label && <Label data-testid="label" text={label} />}
+      <Title
+        data-testid="title"
+        isHighlight
+        isWhite={isTextWhite}
+        text={title}
+      />
+      {!!description && (
+        <Description data-testid="description" text={description} />
+      )}
     </ButtonBase>
   );
 };

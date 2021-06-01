@@ -13,7 +13,7 @@ type HeaderProps = {
 const Header: React.FC<HeaderProps> = ({ isMobile = false }) => {
   const classes = useStyles();
   return (
-    <Box className={classes.container}>
+    <Box data-testid="Header" className={classes.container}>
       {isMobile ? (
         <img src={ImageLogoMobile} alt="G1" />
       ) : (

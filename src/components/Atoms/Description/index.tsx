@@ -10,7 +10,11 @@ type DescriptionProps = {
 const Description: React.FC<DescriptionProps> = ({ text }) => {
   const classes = useStyles();
   return (
-    <Typography className={classes.description} variant="body2">
+    <Typography
+      data-testid="description"
+      className={classes.description}
+      variant="body2"
+    >
       {text}
     </Typography>
   );

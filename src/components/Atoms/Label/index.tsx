@@ -10,7 +10,7 @@ type LabelProps = {
 const Label: React.FC<LabelProps> = ({ text }) => {
   const classes = useStyles();
   return (
-    <Typography className={classes.label} variant="caption">
+    <Typography data-testid="label" className={classes.label} variant="caption">
       {text}
     </Typography>
   );

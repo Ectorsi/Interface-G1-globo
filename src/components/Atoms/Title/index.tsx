@@ -15,7 +15,7 @@ const Title: React.FC<TitleProps> = ({
 }) => {
   const classes = useStyles({ isHighlight, isWhite, text });
   return (
-    <Typography className={classes.title} variant="h2">
+    <Typography data-testid="title" className={classes.title} variant="h2">
       {text}
     </Typography>
   );
