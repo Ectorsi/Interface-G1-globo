@@ -1,7 +1,5 @@
 import { Story, Meta } from '@storybook/react/types-6-0';
 
-// import { getDatePickerValue } from 'date-fns';
-import { zonedTimeToUtc } from 'date-fns-tz';
 import DurationAndPlaceText from '.';
 
 export default {
@@ -23,8 +21,6 @@ export default {
 export const Seconds: Story = () => {
   const dateTime = new Date();
 
-  const utcDate = zonedTimeToUtc(dateTime, 'Europe/Berlin');
-  console.log(utcDate, 'CARALHOOOO');
   dateTime.setHours(dateTime.getHours() - 3);
 
   const currentDate = String(dateTime);
@@ -104,8 +100,6 @@ export const Month: Story = () => {
   dateTime.setHours(dateTime.getHours() - 3);
   dateTime.setMinutes(dateTime.getMinutes() - 4);
   dateTime.setDate(dateTime.getDate() - 1);
-  // dateTime.setDate(dateTime.getDate() + 8);
-
   dateTime.setMonth(dateTime.getMonth() - 1);
 
   const currentDate = String(dateTime);
@@ -123,10 +117,7 @@ export const Year: Story = () => {
   dateTime.setHours(dateTime.getHours() - 3);
   dateTime.setMinutes(dateTime.getMinutes() - 4);
   dateTime.setDate(dateTime.getDate() - 1);
-  // dateTime.setDate(dateTime.getDate() + 8);
-
   dateTime.setMonth(dateTime.getMonth() - 1);
-
   dateTime.setFullYear(dateTime.getFullYear() - 1);
 
   const currentDate = String(dateTime);
