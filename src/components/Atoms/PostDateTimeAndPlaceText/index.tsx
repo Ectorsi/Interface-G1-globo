@@ -4,15 +4,14 @@ import React from 'react';
 import { Typography } from '@material-ui/core';
 import { formatDistance } from 'date-fns';
 import pt from 'date-fns/locale/pt-BR';
-import {} from 'date-fns-tz';
 import useStyles from './styles';
 
-type DurationAndPlaceTextProps = {
+type PostDateTimeAndPlaceTextProps = {
   duration: string;
   newsSource: string;
 };
 
-const DurationAndPlaceText: React.FC<DurationAndPlaceTextProps> = ({
+const PostDateTimeAndPlaceText: React.FC<PostDateTimeAndPlaceTextProps> = ({
   duration,
   newsSource,
 }) => {
@@ -27,11 +26,11 @@ const DurationAndPlaceText: React.FC<DurationAndPlaceTextProps> = ({
 
   return (
     <Typography
-      data-testid="DurationAndPlaceText"
+      data-testid="PostDateTimeAndPlaceText"
       className={classes.container}
       variant="body2"
     >{` ${formatedDuration} — ${newsSource}`}</Typography>
   );
 };
 
-export default DurationAndPlaceText;
+export default PostDateTimeAndPlaceText;

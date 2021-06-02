@@ -1,10 +1,10 @@
 import { Story, Meta } from '@storybook/react/types-6-0';
 
-import DurationAndPlaceText from '.';
+import PostDateTimeAndPlaceText from '.';
 
 export default {
-  title: 'Atoms/DurationAndPlaceText',
-  component: DurationAndPlaceText,
+  title: 'Atoms/PostDateTimeAndPlaceText',
+  component: PostDateTimeAndPlaceText,
 } as Meta;
 
 /**
@@ -27,7 +27,10 @@ export const Seconds: Story = () => {
 
   return (
     <div style={{ maxWidth: '104rem', margin: '0 auto' }}>
-      <DurationAndPlaceText duration={currentDate} newsSource="Globo Esport" />
+      <PostDateTimeAndPlaceText
+        duration={currentDate}
+        newsSource="Globo Esport"
+      />
     </div>
   );
 };
@@ -42,7 +45,10 @@ export const Minutes: Story = () => {
 
   return (
     <div style={{ maxWidth: '104rem', margin: '0 auto' }}>
-      <DurationAndPlaceText duration={currentDate} newsSource="Globo Esport" />
+      <PostDateTimeAndPlaceText
+        duration={currentDate}
+        newsSource="Globo Esport"
+      />
     </div>
   );
 };
@@ -56,7 +62,10 @@ export const Hour: Story = () => {
 
   return (
     <div style={{ maxWidth: '104rem', margin: '0 auto' }}>
-      <DurationAndPlaceText duration={currentDate} newsSource="Globo Esport" />
+      <PostDateTimeAndPlaceText
+        duration={currentDate}
+        newsSource="Globo Esport"
+      />
     </div>
   );
 };
@@ -72,7 +81,10 @@ export const Day: Story = () => {
 
   return (
     <div style={{ maxWidth: '104rem', margin: '0 auto' }}>
-      <DurationAndPlaceText duration={currentDate} newsSource="Globo Esport" />
+      <PostDateTimeAndPlaceText
+        duration={currentDate}
+        newsSource="Globo Esport"
+      />
     </div>
   );
 };
@@ -89,7 +101,10 @@ export const Week: Story = () => {
 
   return (
     <div style={{ maxWidth: '104rem', margin: '0 auto' }}>
-      <DurationAndPlaceText duration={currentDate} newsSource="Globo Esport" />
+      <PostDateTimeAndPlaceText
+        duration={currentDate}
+        newsSource="Globo Esport"
+      />
     </div>
   );
 };
@@ -106,7 +121,10 @@ export const Month: Story = () => {
 
   return (
     <div style={{ maxWidth: '104rem', margin: '0 auto' }}>
-      <DurationAndPlaceText duration={currentDate} newsSource="Globo Esport" />
+      <PostDateTimeAndPlaceText
+        duration={currentDate}
+        newsSource="Globo Esport"
+      />
     </div>
   );
 };
@@ -124,7 +142,10 @@ export const Year: Story = () => {
 
   return (
     <div style={{ maxWidth: '104rem', margin: '0 auto' }}>
-      <DurationAndPlaceText duration={currentDate} newsSource="Globo Esport" />
+      <PostDateTimeAndPlaceText
+        duration={currentDate}
+        newsSource="Globo Esport"
+      />
     </div>
   );
 };
