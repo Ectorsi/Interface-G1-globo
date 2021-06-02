@@ -12,6 +12,6 @@ export default {
 export const Default: Story = () => (
   // eslint-disable-next-line react/react-in-jsx-scope
   <div style={{ maxWidth: '104rem', margin: '0 auto' }}>
-    <Description />
+    <Description text="Description component" />
   </div>
 );

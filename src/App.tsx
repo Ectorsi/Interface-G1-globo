@@ -4,6 +4,7 @@ import React from 'react';
 import { createMuiTheme, CssBaseline, ThemeProvider } from '@material-ui/core';
 import Header from './components/Molecules/Header/index';
 import CardSubjectVertical from './components/Molecules/CardSubjectVertical/index';
+import DurationAndPlaceText from './components/Atoms/DurationAndPlaceText';
 
 export const themeTypography = createMuiTheme({
   typography: {
