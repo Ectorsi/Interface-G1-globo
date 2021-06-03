@@ -9,7 +9,6 @@ const useStyles = makeStyles((theme: Theme) =>
       height: 'auto',
       background: '#fff',
 
-      // border: 'solid 1px #E1E1E1',
       borderRadius: '4px',
       textAlign: 'left',
       textTransform: 'capitalize',
@@ -17,6 +16,9 @@ const useStyles = makeStyles((theme: Theme) =>
       '& h2': {
         marginTop: '8px',
         marginBottom: '6px',
+      },
+      '& .MuiLink-underlineHover:hover': {
+        textDecoration: 'none',
       },
     },
     wrapper: {

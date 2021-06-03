@@ -1,6 +1,9 @@
 import React from 'react';
 
-import { Box, Grid, useMediaQuery } from '@material-ui/core';
+import Box from '@material-ui/core/Box';
+import Grid from '@material-ui/core/Grid';
+import Link from '@material-ui/core/Link';
+import useMediaQuery from '@material-ui/core/useMediaQuery';
 import useStyles from './styles';
 
 import Title from '../../Atoms/Title/index';
@@ -40,11 +43,6 @@ const CardSubjectHorizontal: React.FC<SubjectHorizontalProps> = ({
 
   const Subject = (
     <>
-      {/* <Grid container spacing={3}>
-          <Grid item xs={12}>
-            
-          </Grid>
-       </Grid>    */}
       <Box className={classes.container}>
         <Grid container className={classes.wrapper}>
           <Grid item xs={12} md={4} className={classes.thumbnailWrapper}>
@@ -80,18 +78,13 @@ const CardSubjectHorizontal: React.FC<SubjectHorizontalProps> = ({
 
   const SubjectGroup = (
     <>
-      {/* <Grid container spacing={3}>
-          <Grid item xs={12}>
-            
-          </Grid>
-       </Grid>    */}
       <Box className={classes.container}>
         <Grid container className={classes.wrapper}>
           <Grid item xs={12} md={4} className={classes.thumbnailWrapper}>
-            <a href={link}>
+            <Link href={link}>
               <Thumbnail />
-            </a>
-            {!isDesktop && (
+            </Link>
+            {!isDesktop && duration && (
               <PostDateTimeAndPlaceText
                 duration={duration}
                 newsSource={newsSource}
@@ -102,10 +95,10 @@ const CardSubjectHorizontal: React.FC<SubjectHorizontalProps> = ({
           <Grid item xs={12} md={8} className={classes.contentWrapper}>
             {inProgress && <Live />}
             <div>
-              <a href={link}>
+              <Link href={link}>
                 <Title text={title} />
-              </a>
-              {isDesktop && (
+              </Link>
+              {isDesktop && duration && (
                 <PostDateTimeAndPlaceText
                   duration={duration}
                   newsSource={newsSource}
