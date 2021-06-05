@@ -4,6 +4,7 @@ import { makeStyles, Theme } from '@material-ui/core/styles';
 const useStyles = makeStyles((theme: Theme) => ({
   thumbWrapper: {
     height: '100%',
+    position: 'relative',
   },
   thumbImage: {
     width: '100%',

@@ -7,9 +7,10 @@ export default {
   component: Thumbnail,
 } as Meta;
 
-export const Default: Story = () => (
-  // eslint-disable-next-line react/react-in-jsx-scope
-  <div style={{ maxWidth: '360px', margin: '0 auto' }}>
-    <Thumbnail />
-  </div>
-);
+export const Default: Story = () => {
+  return (
+    <div style={{ maxWidth: '360px', margin: '0 auto' }}>
+      <Thumbnail videoDuration={38499} />
+    </div>
+  );
+};
