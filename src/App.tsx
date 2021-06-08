@@ -3,8 +3,7 @@ import React from 'react';
 // eslint-disable-next-line no-use-before-define
 import { createMuiTheme, CssBaseline, ThemeProvider } from '@material-ui/core';
 import Header from './components/Molecules/Header/index';
-import CardSubjectVertical from './components/Molecules/CardSubjectVertical/index';
-import PostDateTimeDurationAndPlaceText from './components/Atoms/PostDateTimeAndPlaceText';
+import CardSubjectVertical from './components/Organisms/CardSubjectVertical/index';
 
 export const themeTypography = createMuiTheme({
   typography: {

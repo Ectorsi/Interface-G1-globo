@@ -9,7 +9,8 @@ const useStyles = makeStyles((theme: Theme) =>
     container: {
       width: '100%',
       [theme.breakpoints.up('md')]: {
-        width: '464px',
+        // width: '464px',
+        fontSize: '20px',
       },
 
       height: '426px',
@@ -22,10 +23,18 @@ const useStyles = makeStyles((theme: Theme) =>
       borderRadius: '4px',
       textAlign: 'left',
       textTransform: 'capitalize',
+      display: 'flex',
       justifyContent: (props: StyleProp) =>
-        props.imageURL ? 'flex-end' : 'inherit',
+        props.imageURL ? 'flex-end' : 'space-between',
       alignItems: 'start',
       flexDirection: 'column',
+    },
+    wrappTitleAndDescription: {
+      display: 'flex',
+      justifyContent: 'space-between',
+      flexDirection: 'column',
+      flex: 1,
+      padding: '40px 0',
     },
   })
 );

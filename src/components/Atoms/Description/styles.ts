@@ -5,7 +5,6 @@ const useStyles = makeStyles((theme: Theme) => ({
   description: {
     color: '#000',
     width: '95%',
-    marginLeft: '10px',
     fontSize: '16px;',
     fontWeight: 700,
     lineHeight: 1.3,

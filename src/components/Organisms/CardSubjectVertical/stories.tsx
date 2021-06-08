@@ -2,7 +2,7 @@ import { Story, Meta } from '@storybook/react/types-6-0';
 import CardSubjectVertical from '.';
 
 export default {
-  title: 'Molecules/CardSubjectVertical',
+  title: 'Organisms/CardSubjectVertical',
   component: CardSubjectVertical,
 } as Meta;
 

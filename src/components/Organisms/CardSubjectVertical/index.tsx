@@ -32,14 +32,24 @@ const CardSubjectVertical: React.FC<SubjectProps> = ({
       disableTouchRipple
     >
       {!!label && <Label data-testid="label" text={label} />}
-      <Title
-        data-testid="title"
-        isHighlight
-        isWhite={isTextWhite}
-        text={title}
-      />
-      {!!description && (
-        <Description data-testid="description" text={description} />
+      {description ? (
+        <div className={classes.wrappTitleAndDescription}>
+          <Title
+            data-testid="title"
+            isHighlight
+            isWhite={isTextWhite}
+            text={title}
+          />
+
+          <Description data-testid="description" text={description} />
+        </div>
+      ) : (
+        <Title
+          data-testid="title"
+          isHighlight
+          isWhite={isTextWhite}
+          text={title}
+        />
       )}
     </ButtonBase>
   );

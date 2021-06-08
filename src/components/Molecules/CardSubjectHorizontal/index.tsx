@@ -40,6 +40,7 @@ export type SubjectHorizontalProps = {
   subjectGroup?: SingleSubject[];
   videoDuration?: number;
   videoPath?: string;
+  imagePath: string;
 };
 
 const CardSubjectHorizontal: React.FC<SubjectHorizontalProps> = ({
@@ -53,6 +54,7 @@ const CardSubjectHorizontal: React.FC<SubjectHorizontalProps> = ({
   subjectGroup,
   videoDuration,
   videoPath,
+  imagePath,
 }) => {
   const classes = useStyles();
   const isDesktop = useMediaQuery('(min-width:780px)');
@@ -63,7 +65,7 @@ const CardSubjectHorizontal: React.FC<SubjectHorizontalProps> = ({
         <Grid container className={classes.wrapper}>
           <Grid item xs={12} md={4} className={classes.thumbnailWrapper}>
             <a href={link}>
-              <Thumbnail />
+              <Thumbnail imagePath={imagePath} />
             </a>
             {!isDesktop && (
               <PostDateTimeAndPlaceText
@@ -98,7 +100,7 @@ const CardSubjectHorizontal: React.FC<SubjectHorizontalProps> = ({
         <Grid container className={classes.wrapper}>
           <Grid item xs={12} md={4} className={classes.thumbnailWrapper}>
             <Link href={link}>
-              <Thumbnail />
+              <Thumbnail imagePath={imagePath} />
             </Link>
             {!isDesktop && duration && (
               <PostDateTimeAndPlaceText
@@ -170,7 +172,7 @@ const CardSubjectHorizontal: React.FC<SubjectHorizontalProps> = ({
         <Grid container className={classes.wrapper}>
           <Grid item xs={12} md={4} className={classes.thumbnailWrapper}>
             <ButtonBase onClick={handleOpen} disableTouchRipple>
-              <Thumbnail videoDuration={videoDuration} />
+              <Thumbnail videoDuration={videoDuration} imagePath={imagePath} />
             </ButtonBase>
             {!isDesktop && duration && (
               <PostDateTimeAndPlaceText

@@ -8,20 +8,21 @@ import VideoDuration from '../VideoDuration';
 type ThumbnailProps = {
   alt?: string;
   videoDuration?: number;
+  imagePath: string;
 };
 
-const Thumbnail: React.FC<ThumbnailProps> = ({ alt, videoDuration }) => {
+const Thumbnail: React.FC<ThumbnailProps> = ({
+  alt,
+  videoDuration,
+  imagePath,
+}) => {
   const classes = useStyles();
 
   return (
     <Box data-testid="Thumbnail" className={classes.thumbWrapper}>
       {!!videoDuration && <VideoDuration videoDuration={videoDuration} />}
 
-      <img
-        className={classes.thumbImage}
-        src="https://st2.depositphotos.com/6544740/9337/i/600/depositphotos_93376372-stock-photo-sunset-over-sea-pier.jpg"
-        alt={alt}
-      />
+      <img className={classes.thumbImage} src={imagePath} alt={alt} />
     </Box>
   );
 };
