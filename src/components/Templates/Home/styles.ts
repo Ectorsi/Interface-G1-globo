@@ -6,6 +6,13 @@ const useStyles = makeStyles((theme: Theme) =>
     newsGroupWrapper: {
       marginTop: '10px',
     },
+    wrappContainer: {
+      [theme.breakpoints.down('sm')]: {
+        paddingLeft: '0px',
+        paddingRight: '0px',
+      },
+      marginBottom: '30px',
+    },
   })
 );
 

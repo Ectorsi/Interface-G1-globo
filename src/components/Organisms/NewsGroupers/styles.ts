@@ -20,8 +20,8 @@ const useStyles = makeStyles((theme: Theme) => ({
     lineHeight: '25px',
     color: '#666',
     textTransform: 'inherit',
-    padding: '0 100px',
-    textAlign: 'initial',
+    textAlign: 'center',
+    width: '50%',
   },
 }));
 

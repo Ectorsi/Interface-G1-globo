@@ -1,13 +1,13 @@
 import { Story, Meta } from '@storybook/react/types-6-0';
-import Description from '.';
+import Divider from '.';
 
 export default {
-  title: 'Atoms/Description',
-  component: Description,
+  title: 'Atoms/Divider',
+  component: Divider,
 } as Meta;
 
 export const Default: Story = () => (
   <div style={{ maxWidth: '104rem', margin: '0 auto' }}>
-    <Description text="Description component" />
+    <Divider />
   </div>
 );

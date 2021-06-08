@@ -8,12 +8,10 @@ const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     container: {
       width: '100%',
-      [theme.breakpoints.up('md')]: {
-        // width: '464px',
-        fontSize: '20px',
-      },
-
       height: '426px',
+      [theme.breakpoints.down('sm')]: {
+        height: '100%',
+      },
       background: '#fff',
       backgroundImage: (props: StyleProp) => `url(${props.imageURL})`,
       backgroundRepeat: 'no-repeat',
@@ -28,6 +26,24 @@ const useStyles = makeStyles((theme: Theme) =>
         props.imageURL ? 'flex-end' : 'space-between',
       alignItems: 'start',
       flexDirection: 'column',
+
+      '& h2': {
+        [theme.breakpoints.down('sm')]: {
+          fontSize: '20px',
+          letterSpacing: '-0.72px',
+          lineHeight: '24px',
+        },
+      },
+      '& > p': {
+        [theme.breakpoints.down('sm')]: {
+          fontSize: '12px',
+        },
+      },
+      '& p': {
+        [theme.breakpoints.down('sm')]: {
+          fontSize: '16px',
+        },
+      },
     },
     wrappTitleAndDescription: {
       display: 'flex',
@@ -35,6 +51,10 @@ const useStyles = makeStyles((theme: Theme) =>
       flexDirection: 'column',
       flex: 1,
       padding: '40px 0',
+
+      [theme.breakpoints.down('sm')]: {
+        padding: 0,
+      },
     },
   })
 );

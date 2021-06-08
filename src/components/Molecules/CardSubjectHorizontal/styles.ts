@@ -64,6 +64,10 @@ const useStyles = makeStyles((theme: Theme) =>
       top: '30px',
       right: '30px',
     },
+    btnTtitleModal: {
+      textAlign: 'left',
+      justifyContent: 'inherit',
+    },
   })
 );
 

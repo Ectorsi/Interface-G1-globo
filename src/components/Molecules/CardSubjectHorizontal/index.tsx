@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/explicit-function-return-type */
-import React, { useCallback, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 
 import Box from '@material-ui/core/Box';
 import Grid from '@material-ui/core/Grid';
@@ -15,6 +15,7 @@ import Live from '../../Atoms/Live';
 import PostDateTimeAndPlaceText from '../../Atoms/PostDateTimeAndPlaceText';
 import Thumbnail from '../../Atoms/Thumbnail';
 import ContentModal from '../ContentModal';
+import useCheckImageExists from '../../../Utils/useCheckImageExists';
 
 type Content = {
   section: string;
@@ -56,17 +57,28 @@ const CardSubjectHorizontal: React.FC<SubjectHorizontalProps> = ({
   videoPath,
   imagePath,
 }) => {
+  const { returnDefaultOrExistUrl, imageUrl } = useCheckImageExists();
+  useEffect(() => {
+    returnDefaultOrExistUrl(imagePath);
+  }, [imagePath, returnDefaultOrExistUrl]);
+
   const classes = useStyles();
   const isDesktop = useMediaQuery('(min-width:780px)');
+
+  const [open, setOpen] = useState(false);
+
+  const handleOpen = useCallback(() => {
+    setOpen(!open);
+  }, [open]);
 
   const Subject = (
     <>
       <Box className={classes.container}>
         <Grid container className={classes.wrapper}>
-          <Grid item xs={12} md={4} className={classes.thumbnailWrapper}>
-            <a href={link}>
-              <Thumbnail imagePath={imagePath} />
-            </a>
+          <Grid item xs={12} md={4}>
+            <ButtonBase onClick={handleOpen} disableTouchRipple>
+              <Thumbnail imagePath={imageUrl} />
+            </ButtonBase>
             {!isDesktop && (
               <PostDateTimeAndPlaceText
                 duration={duration}
@@ -78,9 +90,13 @@ const CardSubjectHorizontal: React.FC<SubjectHorizontalProps> = ({
           <Grid item xs={12} md={8} className={classes.contentWrapper}>
             {inProgress && <Live />}
             <div>
-              <a href={link}>
+              <ButtonBase
+                onClick={handleOpen}
+                disableTouchRipple
+                className={classes.btnTtitleModal}
+              >
                 <Title text={title} />
-              </a>
+              </ButtonBase>
               {isDesktop && (
                 <PostDateTimeAndPlaceText
                   duration={duration}
@@ -100,7 +116,7 @@ const CardSubjectHorizontal: React.FC<SubjectHorizontalProps> = ({
         <Grid container className={classes.wrapper}>
           <Grid item xs={12} md={4} className={classes.thumbnailWrapper}>
             <Link href={link}>
-              <Thumbnail imagePath={imagePath} />
+              <Thumbnail imagePath={imageUrl} />
             </Link>
             {!isDesktop && duration && (
               <PostDateTimeAndPlaceText
@@ -142,13 +158,6 @@ const CardSubjectHorizontal: React.FC<SubjectHorizontalProps> = ({
     </>
   );
 
-  // const [modalStyle] = useState(getModalStyle);
-  const [open, setOpen] = useState(false);
-
-  const handleOpen = useCallback(() => {
-    setOpen(!open);
-  }, [open]);
-
   // - Quando clica na thumbnail ou no titulo, abre a modal do video
   const Video = (
     <>
@@ -172,7 +181,7 @@ const CardSubjectHorizontal: React.FC<SubjectHorizontalProps> = ({
         <Grid container className={classes.wrapper}>
           <Grid item xs={12} md={4} className={classes.thumbnailWrapper}>
             <ButtonBase onClick={handleOpen} disableTouchRipple>
-              <Thumbnail videoDuration={videoDuration} imagePath={imagePath} />
+              <Thumbnail videoDuration={videoDuration} imagePath={imageUrl} />
             </ButtonBase>
             {!isDesktop && duration && (
               <PostDateTimeAndPlaceText
@@ -185,9 +194,13 @@ const CardSubjectHorizontal: React.FC<SubjectHorizontalProps> = ({
           <Grid item xs={12} md={8} className={classes.contentWrapper}>
             {inProgress && <Live />}
             <div>
-              <Link href={link}>
+              <ButtonBase
+                onClick={handleOpen}
+                disableTouchRipple
+                className={classes.btnTtitleModal}
+              >
                 <Title text={title} />
-              </Link>
+              </ButtonBase>
 
               <Typography className={classes.contentWrapperDescription}>
                 {description}
