@@ -10,7 +10,7 @@ export default {
 export const Default: Story = () => {
   return (
     <div style={{ maxWidth: '360px', margin: '0 auto' }}>
-      <Thumbnail videoDuration={38499} />
+      <Thumbnail videoDuration={38499} imagePath="" />
     </div>
   );
 };

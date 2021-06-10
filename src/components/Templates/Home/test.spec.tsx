@@ -9,6 +9,6 @@ describe('Home component', () => {
 
     const HomeElement = <Home news={mockedPage1} />;
 
-    expect(HomeElement.onload);
+    expect(HomeElement);
   });
 });

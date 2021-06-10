@@ -1,6 +1,5 @@
-/* eslint-disable @typescript-eslint/no-non-null-assertion */
-import { Box } from '@material-ui/core';
 import React from 'react';
+import { Box } from '@material-ui/core';
 import useStyles from './styles';
 
 import VideoDuration from '../VideoDuration';

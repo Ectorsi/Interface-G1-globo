@@ -24,6 +24,7 @@ export const Default: Story = () => {
         mil no Líbano"
         duration={currentDateTime}
         newsSource="Vem da API"
+        imagePath=""
       />
     </div>
   );
@@ -71,6 +72,7 @@ export const SubjectGroup: Story = () => {
         duration={currentDateTime}
         newsSource="Vem da API"
         subjectGroup={mockedSubjectGroup}
+        imagePath=""
       />
     </div>
   );
@@ -95,6 +97,7 @@ export const Video: Story = () => {
         duration={currentDateTime}
         newsSource="Vem da API"
         videoDuration={36000}
+        imagePath=""
       />
     </div>
   );

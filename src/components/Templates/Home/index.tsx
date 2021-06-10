@@ -1,5 +1,5 @@
 import { Container, Grid } from '@material-ui/core';
-import React from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import Header from '../../Molecules/Header';
 import useStyles from './styles';
 import CardSubjectVertical from '../../Organisms/CardSubjectVertical';
@@ -42,16 +42,21 @@ type SingleNews = {
 
 type HomeProps = {
   news: SingleNews[];
+  loadNewPage(): void;
 };
 
-const Home: React.FC<HomeProps> = ({ news }) => {
+const Home: React.FC<HomeProps> = ({ news, loadNewPage }) => {
   const classes = useStyles();
+
+  const loadMoreNews = useCallback(() => {
+    loadNewPage();
+  }, [loadNewPage]);
 
   const newsFeed = Object.values(news);
 
   newsFeed.splice(0, 2);
 
-  console.log(newsFeed, 'neewsss');
+  // console.log(newsFeed, 'neewsss');
   return (
     <>
       <Header />
@@ -138,7 +143,7 @@ const Home: React.FC<HomeProps> = ({ news }) => {
                 })}
               </>
             )}
-            <BtnSeeMore />
+            <BtnSeeMore onClick={loadMoreNews} />
           </Grid>
           <Grid item xs={12} sm={3}>
             <NewsGroupers />

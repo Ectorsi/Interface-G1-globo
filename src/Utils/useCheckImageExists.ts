@@ -1,12 +1,9 @@
-import { useCallback, useEffect, useState } from 'react';
+import { useCallback, useState } from 'react';
 import axios from 'axios';
 
 const useCheckImageExists = (): any => {
   const [imageUrl, setImageUrl] = useState('');
 
-  useEffect(() => {
-    console.info('hasssvaaaaluuueee', imageUrl);
-  }, [imageUrl]);
   const returnDefaultOrExistUrl = useCallback(async (imagePath: string) => {
     return axios
       .get(imagePath)
